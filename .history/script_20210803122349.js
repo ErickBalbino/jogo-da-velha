@@ -1,0 +1,2 @@
+var jogo = [];
+var 

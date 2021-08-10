@@ -1,0 +1,45 @@
+<style>
+        #dvJogo{
+            width: 150px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border:none;
+        }
+        .posJogo{
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+        }
+        #p1{
+            border-top: none;
+            border-left: none;
+        }
+        #p2{
+            border-top: none;
+        }
+        #p3{
+            border-top: none;
+            border-right: none;
+        }
+        #p4{
+            border-left: none;
+        }
+        #p6{
+            border-right: none;
+        }
+        #p7{
+            border-left: none;
+            border-bottom: none;
+        }
+        #p8{
+            border-bottom: none;
+        }
+        #p9{
+            border-right: none;
+            border-bottom: none;
+        }
+    </style>
