@@ -24,10 +24,11 @@ function inicia(){
     if(quemComeca == 1){
         quemComeca = 0;
         quemJoga = quemComeca;
-        document.getElementById("dvStartGame").innerHTML = `Quem começa: Jogador`;
+        messageStartGame = document.getElementById("dvStartGame")
+        messageStartGame.innerHTML = "Quem começa: < JOGADOR >";
     }else{
         quemComeca = 1;
-        document.getElementById("dvStartGame").innerHTML = `Quem começa: Máquina`;
+        document.getElementById("dvStartGame").innerHTML = `Quem começa: < MÁQUINA >`;
         maquinaJoga();
     }
 }
