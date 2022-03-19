@@ -1,9 +1,32 @@
 body{
+    background-color: #3d3d3d;
+    overflow: hidden;
+    position: relative;
+}
+
+main{   
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: #3d3d3d;
+    justify-content: center;
+}
+
+header{
+    width: 90%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+header span{
+    font-size: 1.2rem;
+}
+
+header #help-icon{
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 h1{
@@ -41,7 +64,7 @@ h3{
 }
 
 #dvJogo{
-    width: 300px;
+    width: 270px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border:none;
@@ -49,11 +72,11 @@ h3{
 }
 
 .posJogo{
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     margin: 0;
     padding: 0;
-    border: 1px solid #eee;
+    border: 1px solid #117272;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -118,8 +141,72 @@ h3{
     font-size: 3rem;
 }
 
+#resultText{
+    color: #3d3d3d;
+    background-color: #fff;
+    margin: 40px 0px;
+    padding: 10px 20px;
+    font-size: 1.05rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 3px 3px solid rgba(185, 179, 179, 0.603);
+    color: #f00;
+    border-radius: 5px;
+}
+
+.modal-help{
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    height: 60vh;
+    background-color: #222;
+    color: #fff;
+    border-radius: 10px;
+    filter: drop-shadow(10px 10px 10px #00000046);
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+    transition: 0.4s ease-in-out;
+}
+
+.modal-help h2{
+    text-align: center;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-header i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-description{
+    font-size: 1.05rem;
+}
+
+.modal-description span{
+    color: #117272;
+}
+
 @media (max-width: 768px) {
     h1{
         text-align: center;
+    }
+
+    .modal-help{
+        position: absolute;
+        top: 0;
+        width: 95vw;
+        height: 90vh;
+        background-color: #222;
+        color: #fff;
+        border-radius: 10px;
+        filter: drop-shadow(10px 10px 10px #00000046);
+        padding: 20px;
+        box-sizing: border-box;
+        display: none;
+        transition: 0.4s ease-in-out;
     }
 }

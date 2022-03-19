@@ -4,28 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Jogo da velha</title>
     
     <link rel="stylesheet" href="style.css">
+
+    <script src="jogo.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>JOGO DA VELHA</h1>
-    <script src="script.js"></script>
-    
-    <div id="dvMenu">
-        <h3 id="dvStartGame"></h3>
-        <button onclick="inicia()">Iniciar Jogo</button>
-    </div>
-    <div id="dvJogo">
-        <div id="p1" class="posJogo" onclick="jogar(1)"></div>
-        <div id="p2" class="posJogo" onclick="jogar(2)"></div>
-        <div id="p3" class="posJogo" onclick="jogar(3)"></div>
-        <div id="p4" class="posJogo" onclick="jogar(4)"></div>
-        <div id="p5" class="posJogo" onclick="jogar(5)"></div>
-        <div id="p6" class="posJogo" onclick="jogar(6)"></div>
-        <div id="p7" class="posJogo" onclick="jogar(7)"></div>
-        <div id="p8" class="posJogo" onclick="jogar(8)"></div>
-        <div id="p9" class="posJogo" onclick="jogar(9)"></div>
+    <main id="body">
+        <header>
+            <div>
+                <span>1.0.1</span>
+            </div>
+            <div>
+                <i class="fa fa-question-circle" id="help-icon"></i>
+            </div>
+        </header>
+        <h1>JOGO DA VELHA</h1>
+        <div id="dvMenu">
+            <h3 id="dvStartGame"></h3>
+            <button onclick="inicia()">Iniciar Jogo</button>
+        </div>
+        <div id="dvJogo">
+            <div id="p1" class="posJogo" onclick="jogar(1)"></div>
+            <div id="p2" class="posJogo" onclick="jogar(2)"></div>
+            <div id="p3" class="posJogo" onclick="jogar(3)"></div>
+            <div id="p4" class="posJogo" onclick="jogar(4)"></div>
+            <div id="p5" class="posJogo" onclick="jogar(5)"></div>
+            <div id="p6" class="posJogo" onclick="jogar(6)"></div>
+            <div id="p7" class="posJogo" onclick="jogar(7)"></div>
+            <div id="p8" class="posJogo" onclick="jogar(8)"></div>
+            <div id="p9" class="posJogo" onclick="jogar(9)"></div>
+        </div>
+        <p id="resultText"></p>
+    </main>
+
+    <div id="modal-help" class="modal-help">
+        <div class="modal-header">
+            <i class="fa fa-close" id="close-modal"></i>
+        </div>
+
+        <h2>COMO JOGAR?</h2>
+        
+        <hr>
+
+        <div class="modal-description">
+            <p><span>>>></span> Olá, bem vindo ao jogo da velha, para jogar é bem simples, basta apenas clicas nos quadrados vazios que será preenchido automaticamente!</p>
+            <p><span>>>></span> Você automaticamente ou começa com "X" ou com "O", fique atento!</p>
+            <p><span>>>></span> O resultado da partida vai aparecer no quadrado branco logo abaixo do tabuleiro quando alguém vencer ou a partida terminar!</p>
+            <span>BOA SORTE JOGADOR!</span>
+        </div>
     </div>
 </body>
-</html>
+</html> 
