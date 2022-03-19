@@ -1,2 +1,0 @@
-var jogo = [];
-var tabuleiro = [].

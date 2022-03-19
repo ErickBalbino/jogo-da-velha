@@ -99,8 +99,14 @@ function jogar(p){
             atualizaTabuleiro();
             verificaVencedor = verificaVitoria();
             if(verificaVencedor != ""){
+                empate = 0;
                 alert(`${verificaVencedor} venceu!!`);
                 jogando = false;
+            }
+            if((empate >= 9) && verificaVencedor == ""){
+                alert("EMPATE");
+                jogando = false;
+                empate = 0;
             }
             maquinaJoga();
         }
@@ -121,15 +127,26 @@ function maquinaJoga(){
         }
         verificaVencedor = verificaVitoria();
         if(verificaVencedor != ""){
+            empate = 0;
             alert(`${verificaVencedor} venceu!!`);
             jogando = false;
         }
+        if((empate >= 9) && verificaVencedor == ""){
+                alert("EMPATE");
+                jogando = false;
+                empate = 0;
+            }
         atualizaTabuleiro();
         quemJoga = 0;
     }
 }
 
+let empate = 0;
+
 function verificaVitoria(){
+    empate++;
+    console.log(empate);
+
     var l, c;
     // LINHA
     for(l = 0; l < 3; l++){
@@ -150,6 +167,7 @@ function verificaVitoria(){
     if((jogo[0][2] == jogo[1][1])&&(jogo[1][1] == jogo[2][0])){
         return jogo[0][2];
     }
+
     return "";
 }
 
